@@ -12,7 +12,7 @@ newmtl _Boddy
 	Kd 0.588235 0.588235 0.588235
 	Ks 0.090000 0.090000 0.090000
 	Ke 0.000000 0.000000 0.000000
-	map_Kd ./boddy.jpg
+	map_Kd pinky/boddy.jpg
 
 newmtl _Flame
 	Ns 0.000000
@@ -25,7 +25,7 @@ newmtl _Flame
 	Kd 0.588235 0.588235 0.588235
 	Ks 0.000000 0.000000 0.000000
 	Ke 0.000000 0.000000 0.000000
-	map_Kd ./flame.jpg
+	map_Kd pinky/flame.jpg
 
 newmtl _Mask
 	Ns 9.999999
@@ -38,7 +38,7 @@ newmtl _Mask
 	Kd 1.000000 1.000000 1.000000
 	Ks 0.000000 0.000000 0.000000
 	Ke 0.000000 0.000000 0.000000
-	map_Kd ./mask.jpg
+	map_Kd pinky/mask.jpg
 
 newmtl _Mouth
 	Ns 0.000000
@@ -51,7 +51,7 @@ newmtl _Mouth
 	Kd 0.588235 0.588235 0.588235
 	Ks 0.000000 0.000000 0.000000
 	Ke 0.000000 0.000000 0.000000
-	map_Kd ./mouth.jpg
+	map_Kd pinky/mouth.jpg
 
 newmtl _Teeth
 	Ns 10.000000
@@ -64,7 +64,7 @@ newmtl _Teeth
 	Kd 0.600000 0.584314 0.486275
 	Ks 0.000000 0.000000 0.000000
 	Ke 0.000000 0.000000 0.000000
-	map_Kd ./teeth.jpg
+	map_Kd pinky/teeth.jpg
 
 newmtl _Shade
 	Ns 0.000000
@@ -77,4 +77,4 @@ newmtl _Shade
 	Kd 0.588235 0.588235 0.588235
 	Ks 0.000000 0.000000 0.000000
 	Ke 0.000000 0.000000 0.000000
-	map_Kd ./shade.jpg
+	map_Kd pinky/shade.jpg

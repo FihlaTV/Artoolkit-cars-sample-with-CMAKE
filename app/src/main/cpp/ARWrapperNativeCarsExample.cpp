@@ -50,29 +50,26 @@ JNIFUNCTION_DEMO(demoInitialise(JNIEnv * env, jobject
 
     const char *model0file = "Data/models/Porsche_911_GT3.obj";
     const char *model1file = "Data/models/Ferrari_Modena_Spider.obj";
+//    const char *model0file = "Data/models/robot.obj";
+//    const char *model1file = "Data/models/teapot.obj";
     const char *model2file = "Data/models/M01-Pink-Low-15.obj";
 
-    models[0].
-            patternID = arwAddMarker("single;Data/hiro.patt;80");
-    arwSetMarkerOptionBool(models[0]
-                                   .patternID, ARW_MARKER_OPTION_SQUARE_USE_CONT_POSE_ESTIMATION,
-                           false);
-    arwSetMarkerOptionBool(models[0]
-                                   .patternID, ARW_MARKER_OPTION_FILTERED, true);
+    //first model
+    models[0].patternID = arwAddMarker("single;Data/hiro.patt;80");
+    arwSetMarkerOptionBool(models[0].patternID, ARW_MARKER_OPTION_SQUARE_USE_CONT_POSE_ESTIMATION,false);
+    arwSetMarkerOptionBool(models[0].patternID, ARW_MARKER_OPTION_FILTERED, true);
 
-    models[0].
-            obj = glmReadOBJ2(model0file, 0, 0); // context 0, don't read textures yet.
+    models[0].obj = glmReadOBJ2(model0file, 0, 0); // context 0, don't read textures yet.
     if (!models[0].obj) {
         LOGE("Error loading model from file '%s'.", model0file);
         exit(-1);
     }
-    glmScale(models[0]
-                     .obj, 0.035f);
+    glmScale(models[0].obj, 0.035f);
 //glmRotate(models[0].obj, 3.14159f / 2.0f, 1.0f, 0.0f, 0.0f);
-    glmCreateArrays(models[0]
-                            .obj, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
-    models[0].
-            visible = false;
+    glmCreateArrays(models[0].obj, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
+    models[0].visible = false;
+
+    //second model
 
     models[1].
             patternID = arwAddMarker("single;Data/kanji.patt;80");
@@ -95,7 +92,8 @@ JNIFUNCTION_DEMO(demoInitialise(JNIEnv * env, jobject
                             .obj, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
     models[1].
             visible = false;
-    ///
+
+    //third model
     models[2].
             patternID = arwAddMarker("single;Data/pinky.patt;80");
     arwSetMarkerOptionBool(models[2]
@@ -111,7 +109,7 @@ JNIFUNCTION_DEMO(demoInitialise(JNIEnv * env, jobject
         exit(-1);
     }
     glmScale(models[2]
-                     .obj, 0.035f);
+                     .obj, 0.6f);
 //glmRotate(models[1].obj, 3.14159f / 2.0f, 1.0f, 0.0f, 0.0f);
     glmCreateArrays(models[2]
                             .obj, GLM_SMOOTH | GLM_MATERIAL | GLM_TEXTURE);
