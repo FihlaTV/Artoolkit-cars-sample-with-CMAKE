@@ -6,7 +6,7 @@
 #include <android/log.h>
 
 // Utility preprocessor directive so only one change needed if Java class name changes
-#define JNIFUNCTION_DEMO(sig) Java_org_artoolkit_ar_samples_ARSimpleNativeCars_SimpleNativeRenderer_##sig
+#define JNIFUNCTION_DEMO(sig) Java_ar_arsimplecarsnew_SimpleNativeRenderer_##sig
 
 extern "C" {
 JNIEXPORT void JNICALL

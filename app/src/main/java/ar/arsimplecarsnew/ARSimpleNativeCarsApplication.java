@@ -55,6 +55,9 @@ package ar.arsimplecarsnew;
 
 import android.app.Application;
 
+import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.ndk.CrashlyticsNdk;
+import io.fabric.sdk.android.Fabric;
 import org.artoolkit.ar.base.assets.AssetHelper;
 
 public class ARSimpleNativeCarsApplication extends Application {
@@ -70,6 +73,7 @@ public class ARSimpleNativeCarsApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
         sInstance = this;
         ((ARSimpleNativeCarsApplication) sInstance).initializeInstance();
     }
